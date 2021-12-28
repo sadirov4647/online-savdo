@@ -1,30 +1,48 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+<div class="main">
+  <div v-if="success">
+    <LeftSide/>
   </div>
-  <router-view />
+  <div class="right-side">
+    <UserInfo/>
+  <div class="right">
+   <router-view />
+  </div>
+  </div>
+</div>
 </template>
+<script>
+import LeftSide from './components/LeftSide.vue'
+import UserInfo from './components/UserInfo.vue'
+  export default {
+  name:'App',
+  components: {
+    LeftSide,
+    UserInfo
+  },
+    data(){
+      return{
+        success:false
+      }
+    },
+    created(){
+    let successUser = localStorage.succes
+      if(successUser){
+      this.success = true
+     console.log(successUser)
+    }else{
+      this.$router.push('/register')
+    }
+    }
+  }
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+</script>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style scoped>
+  .main{
+    display: flex;
+  }
+  .right-side{
+    flex-grow: 1;
+  }
 </style>
