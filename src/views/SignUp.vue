@@ -7,7 +7,7 @@
         <form class="admit-form" @submit.prevent="isUser">
             <div class="input user-tel">
                 <label for="tel">+998</label>
-                <input type="tel" id="tel" placeholder="( 9 0 ) _ _ _ _ _ _ _" v-model="tel">
+                <input type="tel" id="tel" placeholder="( 9 0 ) _ _ _ _ _ _ _" v-model="tel" maxlength="9">
             </div>
             <div class="input user-password">
                 <label for="password"></label>

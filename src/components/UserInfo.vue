@@ -4,17 +4,38 @@
             <label for="product-search"></label>
             <input type="text" id="product-search" placeholder="Қидирув">
         </div>
+        <div class="user-right">
+            <div class="about-user">
+                <div class="user-titles">
+                    <h2>{{ successUser.name }}</h2>
+                    <p>+998{{ successUser.tel }}</p>
+                </div>
+                <img src="../assets/inComponentAssets/user.png" alt="user image" width="52" height="52">
+            </div>
+            <div class="user-features">
+                <button><img src="../assets/inComponentAssets/bell.png" alt="bell image" width="20" height="20"></button>
+                <button class="log-out__btn" @click="LogOut"><img src="../assets/inComponentAssets/logout.png" alt="log out image" width="16" height="20"></button>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        name:'UserInfo'
+        name:'UserInfo',
+        props:['successUser'],
+        methods:{
+            LogOut(){
+                this.$emit('clicked', 'some')
+            }
+        }
     }
 </script>
 
 <style scoped>
     .user-info{
+        display: flex;
+        justify-content: space-between;
         padding: 26px 40px;
         background-color: #fff;
     }
@@ -40,5 +61,51 @@
         padding: 15px;
         border-radius: 5px;
         outline: none;
+    }
+    .user-right{
+        display: flex;
+    }
+    .about-user{
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+    }
+    .user-titles{
+        display: flex;
+        flex-direction: column;
+        margin-right: 13px;
+    }
+    .user-titles h2, p{
+        margin: 0;
+    }
+    .user-titles p{
+        color: #BDBDBD;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .user-titles h2{
+        margin-bottom: 5px;
+        color: #000000;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .user-features{
+        display: flex;
+        align-items: center;
+    }
+    .user-features::before{
+        content: "";
+        width: 1px;
+        height: 64px;
+        background-color:  #EFF4F7;
+        margin-right: 40px;
+    }
+    .user-features button{
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+    .log-out__btn{
+        margin-left: 30px;
     }
 </style>
