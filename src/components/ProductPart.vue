@@ -11,59 +11,58 @@
                     <th>№</th>
                     <th>Маҳсулот бўлими номи</th>
                     <th>Расм</th>
-                    <th>ok</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Аёллар бўлими</td>
-                    <td>rasm</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Аёллар бўлими</td>
-                    <td>rasm</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Аёллар бўлими</td>
-                    <td>rasm</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Аёллар бўлими</td>
-                    <td>rasm</td>
-                </tr>
+                <ProductPartChild :productPart="productPart" v-for="(productPart, id) in productParts" :key="id"/>
             </tbody>
         </table>
     </div>
 </template>
 
 <script>
+import ProductPartChild from '../components/ProductPartChild.vue'
+import images from '../assets/inComponentAssets/product.png'
     export default {
         name:"ProductPart",
+        components:{
+            ProductPartChild
+        },
         data(){
             return{
-
+                productParts:[
+                    {
+                        id:1,
+                        partName:'Аёллар бўлими',
+                        image:images
+                    },
+                    {
+                        id:2,
+                        partName:'Эркаклар бўлими',
+                        image:images
+                    },
+                    {
+                        id:3,
+                        partName:'Болалар бўлими',
+                        image:images
+                    },
+                    {
+                        id:4,
+                        partName:'Оёқ кийим бўлими',
+                        image:images
+                    },
+                    {
+                        id:5,
+                        partName:'Аёллар бўлими',
+                        image:images
+                    }
+                ]
             }
         }
     }
 </script>
 
 <style scoped>
-    table{
-        display: table-row;
-    }
-    td{
-        padding-left: 25px;
-    }
-    th{
-        padding: 20px 0;
-        background-color: #2C3E50;
-        color: #fff;
-        text-align: center;
-    }
     .button-features{
         display: flex;
         align-items: center;
@@ -86,7 +85,6 @@
         width: 16px;
         height: 16px;
         margin-right: 15px;
-
     }
     .plus{
         background: #2C3E50;
@@ -106,5 +104,20 @@
     }
     .change::before{
         background: url(../assets/inComponentAssets/edit.png);
+    }
+    table{
+        width: 100%;
+    }
+    table, th, td{
+        border: 1px solid #BDBDBD;
+        border-collapse: collapse;
+    }
+    table thead tr{
+        text-align: left;
+    }
+    table thead tr th{
+        padding: 20px 30px;
+        background-color: #2C3E50;
+        color: #fff;
     }
 </style>

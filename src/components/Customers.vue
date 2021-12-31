@@ -5,18 +5,19 @@
             <button class="modal-back" @click="add">x</button>
         </div>
         <div class="modal-body">
+            <p class="no-item" v-if="noItem">Iltimos barcha inputlarni to'diring!</p>
             <div class="add-name">
                 <label for="name">Исм Фамилия</label>
-                <input type="text" id="name">
+                <input type="text" id="name" v-model="modalUser.modalName" required>
             </div>
             <div class="add-tel">
                 <label for="tel">Телефон рақам</label>
-                <input type="tel" id="tel">
+                <input type="tel" id="tel" v-model="modalUser.modalTel" maxlength="9" required>
             </div>
             <div class="add-region">
                 <label for="regions">Вилоят</label>
-                <select name="regions" id="regions" v-model="region" required>
-                    <option value="farg'ona" selected>Farg'ona</option>
+                <select name="regions" id="regions" v-model="modalUser.modalRegion" required>
+                    <option value="farg'ona">Farg'ona</option>
                     <option value="andijon">Andijon</option>
                     <option value="namangan">Namangan</option>
                     <option value="buxoro">Buxoro</option>
@@ -28,10 +29,17 @@
             </div>
             <div class="add-address">
                 <label for="address">Манзил</label>
-                <input type="text" id="address">
+                <input type="text" id="address" v-model="modalUser.modalAddress" required>
             </div>
         </div>
+        <div class="modal-footer">
+            <button class="modal-footer__back" @click="add">Ортга</button>
+            <button class="modal-footer__save" @click="modalAdd">Сақлаш</button>
+        </div>
     </div>
+
+
+
     <div>
         <div class="button-features">
             <button class="buttons plus" @click="add">Қўшиш</button>
@@ -65,6 +73,13 @@
         data(){
             return{
                 isModal:false,
+                noItem:false,
+                modalUser:{
+                    modalName:'',
+                    modalAddress:'',
+                    modalTel:'',
+                    modalRegion:'',
+                },
                 mijozlar:[
                 {
                     id: 1,
@@ -100,17 +115,40 @@
         methods:{
             add(){
                 this.isModal = !this.isModal
+            },
+            modalAdd(){
+              if(this.modalUser.modalName === '' && this.modalUser.modalTel === '' && this.modalUser.modalAddress === '' && this.modalUser.modalRegion === ''){
+                this.noItem = true
+              }else{
+                  this.noItem = !this.noItem
+                  this.mijozlar.push({
+                      id:Math.round(Math.random() * 10),
+                      telefon:this.modalUser.modalTel,
+                      name:this.modalUser.modalName,
+                      viloyat:this.modalUser.modalRegion,
+                      manzil:this.modalUser.modalAddress
+                  })
+                  this.modalUser.modalTel = ''
+                  this.modalUser.modalName = ''
+                  this.modalUser.modalAddress = ''
+                  this.modalUser.modalRegion = ''
+              }
+            },
+            remove(){
+                this.mijozlar.shift()
             }
         }
     }
 </script>
 
 <style  scoped>
+    .no-item{
+        position: absolute;
+        justify-self: center;
+    }
     .modal-mijoz{
         display: flex;
         position: absolute;
-        background: rgba(44, 62, 80, 0.5);
-        backdrop-filter: blur(15px);
         flex-direction: column;
         max-width: 636px;
         width: 100%;
@@ -122,6 +160,7 @@
         background-color: #F2F2F2;
     }
     .modal-body{
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 50px 48px;
@@ -159,6 +198,30 @@
         border: none;
         padding: 6px 10px;
         cursor: pointer;
+        color: #fff;
+    }
+    .modal-footer{
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 34px;
+    }
+    .modal-footer button{
+        border: none;
+        padding: 13px 48px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    .modal-footer button:hover{
+        opacity: 0.8;
+    }
+    .modal-footer__back{
+        background-color: #F2F2F2;
+        margin-right: 32px;
+        color: #2C3E50;
+    }
+    .modal-footer__save{
+        background-color: #2C3E50;
         color: #fff;
     }
     .button-features{
