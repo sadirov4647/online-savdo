@@ -5,16 +5,65 @@
             <button class="change">Ўзгартириш</button>
             <button class="minus">Ўчириш</button>
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Маҳсулот бўлими номи</th>
+                    <th>Расм</th>
+                    <th>ok</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Аёллар бўлими</td>
+                    <td>rasm</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Аёллар бўлими</td>
+                    <td>rasm</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Аёллар бўлими</td>
+                    <td>rasm</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Аёллар бўлими</td>
+                    <td>rasm</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 
 <script>
     export default {
-        name:"ProductPart"
+        name:"ProductPart",
+        data(){
+            return{
+
+            }
+        }
     }
 </script>
 
 <style scoped>
+    table{
+        display: table-row;
+    }
+    td{
+        padding-left: 25px;
+    }
+    th{
+        padding: 20px 0;
+        background-color: #2C3E50;
+        color: #fff;
+        text-align: center;
+    }
     .button-features{
         display: flex;
         align-items: center;

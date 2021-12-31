@@ -23,6 +23,8 @@
     .left-side{
         max-width: 318px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .left-side__title h2{
         padding: 27px 0;
@@ -34,6 +36,7 @@
     .left-side__routers{
         background-color: #2C3E50;
         padding: 42px;
+        height: 100%;
     }
     a{
         color: #fff;

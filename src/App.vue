@@ -1,8 +1,6 @@
 <template>
   <div v-if="success" class="main">
-    <div>
       <LeftSide/>
-    </div>
     <div class="right-side">
       <UserInfo :successUser="successUser" @clicked="notShow"/>
       <div class="right-bottom">
@@ -53,6 +51,7 @@
   }
   .main{
     display: flex;
+    height: 100vh;
   }
   .right-side{
     display: flex;

@@ -14,7 +14,7 @@
                 <input type="tel" id="tel" placeholder="( 9 0 ) _ _ _ _ _ _ _" maxlength="9" v-model="tel" required>
             </div>
             <div class="input user-select">
-                <select name="regions" id="regions" v-model="region">
+                <select name="regions" id="regions" v-model="region" required>
                     <option value="farg'ona" >Farg'ona</option>
                     <option value="andijon">Andijon</option>
                     <option value="namangan">Namangan</option>
