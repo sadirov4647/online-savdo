@@ -14,7 +14,7 @@
             </div>
             <div class="user-features">
                 <button><img src="../assets/inComponentAssets/bell.png" alt="bell image" width="20" height="20"></button>
-                <button class="log-out__btn" @click="LogOut"><img src="../assets/inComponentAssets/logout.png" alt="log out image" width="16" height="20"></button>
+                <router-link class="log-out__btn" :to="{name: 'Register'}"><img src="../assets/inComponentAssets/logout.png" alt="log out image" width="16" height="20"></router-link>
             </div>
         </div>
     </div>
@@ -23,12 +23,7 @@
 <script>
     export default {
         name:'UserInfo',
-        props:['successUser'],
-        methods:{
-            LogOut(){
-                this.$emit('clicked', 'some')
-            }
-        }
+        props:['successUser']
     }
 </script>
 
