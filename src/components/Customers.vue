@@ -64,7 +64,7 @@
 </template>
 
 <script>
-    import CustomerChild from '../components/CustomerChild.vue'
+    import CustomerChild from './ChildComponents/CustomerChild.vue'
     export default {
         name:"Customers",
         components:{
@@ -148,7 +148,8 @@
     }
     .modal-mijoz{
         display: flex;
-        position: absolute;
+        position: fixed;
+        bottom: 0;
         flex-direction: column;
         max-width: 636px;
         width: 100%;
@@ -162,6 +163,7 @@
     .modal-body{
         position: relative;
         display: grid;
+        gap: 20px;
         grid-template-columns: 1fr 1fr;
         padding: 50px 48px;
         background-color: #fff;
