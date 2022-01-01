@@ -132,6 +132,8 @@
                   this.modalUser.modalName = ''
                   this.modalUser.modalAddress = ''
                   this.modalUser.modalRegion = ''
+
+                  this.isModal = !this.isModal
               }
             },
             remove(){
