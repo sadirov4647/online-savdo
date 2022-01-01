@@ -133,6 +133,7 @@
                     this.noItem = !this.noItem
                 }else{
                     this.productLists.push({
+                        id:Math.round(Math.random() * 10),
                         listName:this.modalList.name,
                         listPart:this.modalList.part,
                         listCost:this.modalList.cost,

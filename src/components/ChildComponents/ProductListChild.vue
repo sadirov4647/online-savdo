@@ -17,13 +17,13 @@
 </script>
 
 <style scoped>
-p{
-    margin: 0;
-    text-align: center;
-    font-weight: 500;
-font-size: 14px;
-line-height: 17px;
-}
+    p{
+        margin: 0;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
 
     td{
         border: 1px solid #BDBDBD;

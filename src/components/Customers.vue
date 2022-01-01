@@ -149,7 +149,6 @@
     .modal-mijoz{
         display: flex;
         position: fixed;
-        bottom: 0;
         flex-direction: column;
         max-width: 636px;
         width: 100%;
