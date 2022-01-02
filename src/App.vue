@@ -1,5 +1,5 @@
 <template>
-  <div v-if="success" class="main">
+  <div class="main">
       <LeftSide/>
     <div class="right-side">
       <UserInfo :successUser="successUser" @clicked="notShow"/>
@@ -30,8 +30,7 @@
       }
     },
     created(){
-      let successUser = localStorage.succes
-      successUser = JSON.parse(successUser)
+      let successUser = JSON.parse(localStorage.getItem("succes"))
       console.log(successUser)
       if(successUser){
         this.success = true

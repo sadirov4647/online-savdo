@@ -38,20 +38,18 @@
                     tel:this.tel,
                     password:this.password
                 }
-               let getUser =  localStorage.users;
-               getUser = JSON.parse(getUser)
+               let getUser =  JSON.parse(localStorage.getItem("users"));
 
                 getUser.forEach(item => {
                    if(item.tel === credential.tel && item.password === credential.password) {
                    this.success.push(item)
                    let success =  localStorage.setItem("succes", JSON.stringify(this.success))
-                    console.log(success)
+                    console.log(this.success)
                       this.$router.push('/')
                     }else{
                         this.error = true
                     }
                 })
-
                 this.tel = '',
                 this.password = ''
             }
