@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div v-if="success" class="main">
       <LeftSide/>
     <div class="right-side">
       <UserInfo :successUser="successUser" @clicked="notShow"/>
