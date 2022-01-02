@@ -32,6 +32,7 @@
     created(){
       let successUser = localStorage.succes
       successUser = JSON.parse(successUser)
+      console.log(successUser)
       if(successUser){
         this.success = true
         this.successUser = successUser[0]
