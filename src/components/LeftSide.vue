@@ -67,4 +67,10 @@
         background: url(../assets/customer.svg);
         background-repeat: no-repeat;
     }
+
+    @media screen and (max-width:1050px) {
+        .left-side__routers{
+            padding: 20px;
+        }
+    }
 </style>

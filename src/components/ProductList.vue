@@ -90,7 +90,7 @@
                         listPart:'Аёллар бўлими',
                         listCost:'125 000',
                         listSize:'1300 х 830 х 620 х 860мм',
-                        listAbout:'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem...'
+                        listAbout:'Lorem ipsum lorem...'
                     },
                     {
                         id:2,
@@ -98,7 +98,7 @@
                         listPart:'Аёллар бўлими',
                         listCost:'125 000',
                         listSize:'1300 х 830 х 620 х 860мм',
-                        listAbout:'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem...'
+                        listAbout:'Lorem ipsum lorem...'
                     },
                     {
                         id:3,
@@ -106,7 +106,7 @@
                         listPart:'Аёллар бўлими',
                         listCost:'125 000',
                         listSize:'1300 х 830 х 620 х 860мм',
-                        listAbout:'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem...'
+                        listAbout:'Lorem ipsum lorem...'
                     },
                     {
                         id:4,
@@ -114,7 +114,7 @@
                         listPart:'Аёллар бўлими',
                         listCost:'125 000',
                         listSize:'1300 х 830 х 620 х 860мм',
-                        listAbout:'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem...'
+                        listAbout:'Lorem ipsum lorem...'
                     },
                     {
                         id:5,
@@ -122,7 +122,7 @@
                         listPart:'Аёллар бўлими',
                         listCost:'125 000',
                         listSize:'1300 х 830 х 620 х 860мм',
-                        listAbout:'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem...'
+                        listAbout:'Lorem ipsum lorem...'
                     },
                 ]
             }

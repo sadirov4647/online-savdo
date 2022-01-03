@@ -140,4 +140,10 @@
         background-color: #2C3E50;
         color: #fff;
     }
+
+    @media screen and (max-width:1050px) {
+        .messages-features{
+            margin-bottom: 15px;
+        }
+    }
 </style>

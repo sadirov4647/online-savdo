@@ -39,28 +39,28 @@
     </div>
 
 
+                <div class="button-features">
+                    <button class="buttons plus" @click="add">Қўшиш</button>
+                    <button class="buttons change" @click="change">Ўзгартириш</button>
+                    <button class="buttons minus" @click="remove">Ўчириш</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Исм Фамилия</th>
+                            <th>Телефон</th>
+                            <th>Вилоят</th>
+                            <th>Манзил</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <CustomerChild :mijoz="mijoz" v-for="(mijoz, id) in mijozlar" :key="id"/>
+                    </tbody>
+                </table>
 
-    <div>
-        <div class="button-features">
-            <button class="buttons plus" @click="add">Қўшиш</button>
-            <button class="buttons change" @click="change">Ўзгартириш</button>
-            <button class="buttons minus" @click="remove">Ўчириш</button>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Исм Фамилия</th>
-                    <th>Телефон</th>
-                    <th>Вилоят</th>
-                    <th>Манзил</th>
-                </tr>
-            </thead>
-            <tbody>
-                <CustomerChild :mijoz="mijoz" v-for="(mijoz, id) in mijozlar" :key="id"/>
-            </tbody>
-        </table>
-    </div>
+
+
 </template>
 
 <script>
@@ -72,6 +72,7 @@
         },
         data(){
             return{
+                success:false,
                 isModal:false,
                 noItem:false,
                 modalUser:{
@@ -112,29 +113,30 @@
                 ],
             }
         },
+
         methods:{
             add(){
                 this.isModal = !this.isModal
             },
             modalAdd(){
-              if(this.modalUser.modalName === '' && this.modalUser.modalTel === '' && this.modalUser.modalAddress === '' && this.modalUser.modalRegion === ''){
-                this.noItem = true
-              }else{
-                  this.noItem = !this.noItem
-                  this.mijozlar.push({
-                      id:Math.round(Math.random() * 10),
-                      telefon:this.modalUser.modalTel,
-                      name:this.modalUser.modalName,
-                      viloyat:this.modalUser.modalRegion,
-                      manzil:this.modalUser.modalAddress
-                  })
-                  this.modalUser.modalTel = ''
-                  this.modalUser.modalName = ''
-                  this.modalUser.modalAddress = ''
-                  this.modalUser.modalRegion = ''
+                if(this.modalUser.modalName === '' && this.modalUser.modalTel === '' && this.modalUser.modalAddress === '' && this.modalUser.modalRegion === ''){
+                    this.noItem = true
+                }else{
+                    this.noItem = !this.noItem
+                    this.mijozlar.push({
+                        id:Math.round(Math.random() * 10),
+                        telefon:this.modalUser.modalTel,
+                        name:this.modalUser.modalName,
+                        viloyat:this.modalUser.modalRegion,
+                        manzil:this.modalUser.modalAddress
+                    })
+                    this.modalUser.modalTel = ''
+                    this.modalUser.modalName = ''
+                    this.modalUser.modalAddress = ''
+                    this.modalUser.modalRegion = ''
 
-                  this.isModal = !this.isModal
-              }
+                    this.isModal = !this.isModal
+                }
             },
             remove(){
                 this.mijozlar.shift()
@@ -144,6 +146,14 @@
 </script>
 
 <style  scoped>
+    .customer-main{
+        display: flex;
+    }
+    .main-right{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
     .no-item{
         position: absolute;
         justify-self: center;

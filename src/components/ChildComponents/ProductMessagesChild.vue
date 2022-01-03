@@ -22,4 +22,10 @@
         border: 1px solid #BDBDBD;
         border-collapse: collapse;
     }
+    @media screen and (max-width:1050px) {
+        td{
+            text-align: center;
+            padding: 5px;
+        }
+    }
 </style>

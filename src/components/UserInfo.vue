@@ -23,7 +23,27 @@
 <script>
     export default {
         name:'UserInfo',
-        props:['successUser']
+        data(){
+            return{
+                successUser:'',
+            }
+        },
+        methods:{
+            notShow(){
+                this.success = !this.success
+            }
+        },
+        created(){
+            let successUser = JSON.parse(localStorage.getItem("succes"))
+            if(successUser){
+                this.success = true
+                this.successUser = successUser[0]
+                console.log(successUser)
+            }
+            else{
+                this.$router.redirect('/register')
+            }
+        },
     }
 </script>
 
@@ -102,5 +122,20 @@
     }
     .log-out__btn{
         margin-left: 30px;
+    }
+
+    @media screen and (max-width:1050px) {
+        .user-info{
+            padding: 13px 20px;
+        }
+        .user-features::before{
+            margin-right: 10px;
+        }
+        .user-info__input{
+            width: auto;
+        }
+        .about-user{
+            margin-right: 10px;
+        }
     }
 </style>
