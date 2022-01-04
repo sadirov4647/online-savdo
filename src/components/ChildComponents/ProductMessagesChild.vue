@@ -1,11 +1,11 @@
 <template>
     <tr>
-        <td>{{ message.id }}</td>
-        <td>{{ message.name }}</td>
-        <td>{{ message.tel }}</td>
-        <td>{{ message.telSecond }}шахар</td>
-        <td>{{ message.address }}</td>
-        <td>{{ message.message }}</td>
+        <td scope="row">{{ message.id }}</td>
+        <td scope="row">{{ message.name }}</td>
+        <td scope="row">{{ message.tel }}</td>
+        <td scope="row">{{ message.telSecond }}</td>
+        <td scope="row">{{ message.address }}</td>
+        <td scope="row">{{ message.message }}</td>
     </tr>
 </template>
 
@@ -25,7 +25,12 @@
     @media screen and (max-width:1050px) {
         td{
             text-align: center;
-            padding: 5px;
+            padding: 5px 10px;
+        }
+    }
+    @media screen and (max-width:700px) {
+        td{
+            padding: 2px;
         }
     }
 </style>

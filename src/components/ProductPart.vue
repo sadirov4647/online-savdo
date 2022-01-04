@@ -28,12 +28,12 @@
             <button class="buttons change">Ўзгартириш</button>
             <button class="buttons remove">Ўчириш</button>
         </div>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>№</th>
-                    <th>Маҳсулот бўлими номи</th>
-                    <th>Расм</th>
+                    <th scope="col">№</th>
+                    <th scope="col">Маҳсулот бўлими номи</th>
+                    <th scope="col">Расм</th>
                 </tr>
             </thead>
             <tbody>

@@ -1,10 +1,10 @@
 <template>
     <tr>
-        <td>{{ mijoz.id }}</td>
-        <td>{{ mijoz.name }}</td>
-        <td>{{ mijoz.telefon }}</td>
-        <td>{{ mijoz.viloyat }}</td>
-        <td>{{ mijoz.manzil }}</td>
+        <td scope="row">{{ mijoz.id }}</td>
+        <td scope="row">{{ mijoz.name }}</td>
+        <td scope="row">{{ mijoz.telefon }}</td>
+        <td scope="row">{{ mijoz.viloyat }}</td>
+        <td scope="row">{{ mijoz.manzil }}</td>
     </tr>
 </template>
 
@@ -20,5 +20,15 @@
         padding: 8px 30px;
         border: 1px solid #BDBDBD;
         border-collapse: collapse;
+    }
+    @media screen and (max-width:1050px) {
+        td{
+            padding: 5px 10px;
+        }
+    }
+    @media screen and (max-width:700px) {
+        td{
+            padding: 2px;
+        }
     }
 </style>

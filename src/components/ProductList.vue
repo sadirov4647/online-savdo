@@ -47,15 +47,15 @@
             <button class="buttons change" @click="change">Ўзгартириш</button>
             <button class="buttons minus" @click="remove">Ўчириш</button>
         </div>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>№</th>
-                    <th>Маҳсулот номи</th>
-                    <th>Маҳсулот бўлими</th>
-                    <th>Нарҳи</th>
-                    <th>Ўлчам</th>
-                    <th>Маҳсулот ҳақида</th>
+                    <th scope="col">№</th>
+                    <th scope="col">Маҳсулот номи</th>
+                    <th scope="col">Маҳсулот бўлими</th>
+                    <th scope="col">Нарҳи</th>
+                    <th scope="col">Ўлчам</th>
+                    <th scope="col">Маҳсулот ҳақида</th>
                 </tr>
             </thead>
             <tbody>

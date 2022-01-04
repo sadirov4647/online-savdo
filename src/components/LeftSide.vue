@@ -73,4 +73,17 @@
             padding: 20px;
         }
     }
+
+    @media screen and (max-width:878px) {
+        a::before{
+            margin-right: 10px;
+        }
+    }
+    @media screen and (max-width:825px) {
+        .left-side{
+            display: none;
+            position: fixed;
+            right: 0;
+        }
+    }
 </style>

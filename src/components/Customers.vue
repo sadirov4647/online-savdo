@@ -44,14 +44,14 @@
                     <button class="buttons change" @click="change">Ўзгартириш</button>
                     <button class="buttons minus" @click="remove">Ўчириш</button>
                 </div>
-                <table>
+                <table class="table">
                     <thead>
                         <tr>
-                            <th>№</th>
-                            <th>Исм Фамилия</th>
-                            <th>Телефон</th>
-                            <th>Вилоят</th>
-                            <th>Манзил</th>
+                            <th scope="col">№</th>
+                            <th scope="col">Исм Фамилия</th>
+                            <th scope="col">Телефон</th>
+                            <th scope="col">Вилоят</th>
+                            <th scope="col">Манзил</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -48,16 +48,16 @@
             <button class="buttons change" @click="change">Ўзгартириш</button>
             <button class="buttons minus" @click="remove">Ўчириш</button>
         </div>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>№</th>
-                    <th>Мижоз номи</th>
-                    <th>Вақти</th>
-                    <th>Жами сони</th>
-                    <th>Жами суммаси</th>
-                    <th>Расм</th>
-                    <th>Манзили</th>
+                    <th scope="col">№</th>
+                    <th scope="col">Мижоз номи</th>
+                    <th scope="col">Вақти</th>
+                    <th scope="col">Жами сони</th>
+                    <th scope="col">Жами суммаси</th>
+                    <th scope="col">Расм</th>
+                    <th scope="col">Манзили</th>
                 </tr>
             </thead>
             <tbody>

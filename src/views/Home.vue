@@ -35,6 +35,19 @@
     }
 
     @media screen and (max-width:1050px) {
-
+        table thead tr th{
+            padding: 5px 10px !important;
+        }
+        .main-right__bottom{
+            padding: 35px;
+        }
+    }
+    @media screen and (max-width:878px) {
+        .main-right__bottom{
+            padding: 20px;
+        }
+        table thead tr th{
+            padding: 3px !important;
+        }
     }
 </style>

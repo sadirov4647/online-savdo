@@ -7,15 +7,15 @@
             <button class="message-send">Ҳабарни юбориш</button>
         </div>
 
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>№</th>
-                    <th>Мижоз номи</th>
-                    <th>Телефон рақам</th>
-                    <th>Телефон рақам 2</th>
-                    <th>Манзил</th>
-                    <th>Ҳабарнома</th>
+                    <th scope="col">№</th>
+                    <th scope="col">Мижоз номи</th>
+                    <th scope="col">Телефон рақам</th>
+                    <th scope="col">Телефон рақам 2</th>
+                    <th scope="col">Манзил</th>
+                    <th scope="col">Ҳабарнома</th>
                 </tr>
             </thead>
             <tbody>
@@ -145,5 +145,9 @@
         .messages-features{
             margin-bottom: 15px;
         }
+    }
+
+    @media screen and (max-width:878px) {
+
     }
 </style>

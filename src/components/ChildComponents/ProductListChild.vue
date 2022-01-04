@@ -1,11 +1,11 @@
 <template>
     <tr>
-        <td><p>{{ productList.id }}</p></td>
-        <td><p>{{ productList.listName }}</p></td>
-        <td><p>{{ productList.listPart }}</p></td>
-        <td><p>{{ productList.listCost }}сўм</p></td>
-        <td><p>{{ productList.listSize }}</p></td>
-        <td><p>{{ productList.listAbout }}</p></td>
+        <td scope="row"><p>{{ productList.id }}</p></td>
+        <td scope="row"><p>{{ productList.listName }}</p></td>
+        <td scope="row"><p>{{ productList.listPart }}</p></td>
+        <td scope="row"><p>{{ productList.listCost }}сўм</p></td>
+        <td scope="row"><p>{{ productList.listSize }}</p></td>
+        <td scope="row"><p>{{ productList.listAbout }}</p></td>
     </tr>
 </template>
 
@@ -29,4 +29,10 @@
         border: 1px solid #BDBDBD;
         border-collapse: collapse;
     }
+    @media screen and (max-width:700px) {
+        td{
+            padding: 2px;
+        }
+    }
+
 </style>
