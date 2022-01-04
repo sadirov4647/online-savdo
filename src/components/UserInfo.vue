@@ -1,9 +1,10 @@
 <template>
     <div class="user-info">
-        <div class="user-info__input">
-            <label for="product-search"></label>
-            <input type="text" id="product-search" placeholder="Қидирув">
-        </div>
+            <div class="user-info__input">
+                <label for="product-search"></label>
+                <input type="text" id="product-search" placeholder="Қидирув">
+            </div>
+
         <div class="user-right">
             <div class="about-user">
                 <div class="user-titles">
@@ -48,6 +49,9 @@
 </script>
 
 <style scoped>
+    .nav-btn{
+        display: none;
+    }
     .user-info{
         display: flex;
         justify-content: space-between;
@@ -136,6 +140,25 @@
         }
         .about-user{
             margin-right: 10px;
+        }
+    }
+    @media screen and (max-width:600px) {
+        .user-info{
+            display: block;
+        }
+        .user-right{
+            justify-content: space-around;
+        }
+        .user-info__input{
+            display: block;
+            max-width: 270px;
+        }
+        .nav-btn{
+            display: block;
+            border: none;
+            background-color: aquamarine;
+            border-radius: 5px;
+            padding: 10px 15px;
         }
     }
 </style>

@@ -50,4 +50,17 @@
             padding: 3px !important;
         }
     }
-</style>
+    @media screen and (max-width:615px) {
+    .button-features{
+        flex-direction: column;
+        align-items: flex-start !important;
+        max-width: 300px;
+    }
+    .buttons{
+        margin-bottom: 12px;
+        margin-right: 0 !important;
+        width: 100%;
+    }
+
+    }
+    </style>

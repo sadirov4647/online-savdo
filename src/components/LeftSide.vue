@@ -1,4 +1,6 @@
 <template>
+    <div>
+    <button class="res" @click="res">X</button>
     <div class="left-side">
         <div class="left-side__title">
             <h2>Онлайн Савдо</h2>
@@ -11,15 +13,31 @@
             <router-link class="sms" :to="{name:'ProductMessages'}">SMS ҳабарнома</router-link>
         </div>
     </div>
+</div>
 </template>
 
 <script>
     export default {
         name:'LeftSide',
+        methods:{
+            res(){
+                console.log('salom')
+            }
+        }
     }
 </script>
 
 <style scoped>
+    .res{
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        background-color: aquamarine;
+        color: #fff;
+    }
     .left-side{
         max-width: 318px;
         width: 100%;
