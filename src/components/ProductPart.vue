@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-product__part" v-if="isModal">
+    <div class="modal-top modal-product__part" v-if="isModal">
         <div class="modal-header">
             <h2>Мижозлар қўшиш</h2>
             <button class="modal-back" @click="add">x</button>

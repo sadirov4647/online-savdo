@@ -21,7 +21,12 @@
         name:'LeftSide',
         methods:{
             res(){
-                console.log('salom')
+                let resNav = document.querySelector('.left-side');
+                if(resNav.classList.contains('ok')){
+                    resNav.classList.remove("ok")
+                }else{
+                    resNav.classList.add('ok')
+                }
             }
         }
     }
@@ -29,6 +34,7 @@
 
 <style scoped>
     .res{
+        display: none;
         position: fixed;
         top: 25px;
         right: 25px;
@@ -41,6 +47,7 @@
     .left-side{
         max-width: 318px;
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -99,9 +106,19 @@
     }
     @media screen and (max-width:825px) {
         .left-side{
-            display: none;
+            transform: translateX(850px);
             position: fixed;
-            right: 0;
+            transition: 0.3s;
+            z-index: 99;
         }
+    }
+    @media screen and (max-width:600px) {
+        .res{
+            display: block;
+        }
+        .ok{
+        transform: translateX(0);
+
+    }
     }
 </style>

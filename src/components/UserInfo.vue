@@ -152,6 +152,7 @@
         .user-info__input{
             display: block;
             max-width: 270px;
+            position: fixed;
         }
         .nav-btn{
             display: block;

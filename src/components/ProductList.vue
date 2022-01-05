@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-mijoz" v-if="isModal">
+    <div class="modal-top modal-mijoz" v-if="isModal">
         <div class="modal-header">
             <h2>Мижозлар қўшиш</h2>
             <button class="modal-back" @click="add">x</button>
@@ -160,7 +160,7 @@
     }
     .modal-mijoz{
         display: flex;
-        position: fixed;
+        position: absolute;
         bottom: 0;
         flex-direction: column;
         max-width: 636px;
@@ -317,5 +317,16 @@
         padding: 20px 30px;
         background-color: #2C3E50;
         color: #fff;
+    }
+    @media screen and (max-width:600px) {
+        .modal-body{
+            gap: 5px;
+            padding: 25px 24px;
+            grid-template-columns: 1fr;
+        }
+        .modal-mijoz{
+            position: absolute;
+            top: 0;
+        }
     }
 </style>
