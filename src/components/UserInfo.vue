@@ -148,6 +148,7 @@
         }
         .user-right{
             justify-content: space-around;
+            padding-top: 60px;
         }
         .user-info__input{
             display: block;
